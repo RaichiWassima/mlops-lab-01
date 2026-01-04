@@ -9,8 +9,8 @@ stages:
       size: 27933
     - path: src/prepare_data.py
       hash: md5
-      md5: 0c575712a0ab5244c2862665d9c8c356
-      size: 7493
+      md5: 1895f04ce4fc9df6e15a5cc8e24f6a1d
+      size: 7549
     outs:
     - path: data/processed.csv
       hash: md5
@@ -32,11 +32,10 @@ stages:
       md5: cbeac4eaa2755375c54179d952766ed6
       size: 8683
     outs:
-    - path: models
+    - path: models/model.joblib
       hash: md5
-      md5: 5e3c9f89e54abcbd3948097950ac5c3d.dir
-      size: 7412
-      nfiles: 2
+      md5: 6f7090c657ebf992acdf9806cdaa32ab
+      size: 3690
   evaluate:
     cmd: python src/evaluate.py
     deps:
@@ -46,8 +45,8 @@ stages:
       size: 28240
     - path: models/model.joblib
       hash: md5
-      md5: da8f1087525488eb363d863fd432d531
-      size: 3706
+      md5: 6f7090c657ebf992acdf9806cdaa32ab
+      size: 3690
     - path: src/evaluate.py
       hash: md5
       md5: 74711a4c71298f8babb4bcddc72fcf7e
