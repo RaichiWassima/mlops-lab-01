@@ -13,7 +13,7 @@ stages:
     - data/processed.csv
     - src/train.py
     outs:
-    - models
+    - models/model.joblib
   evaluate:
     cmd: python src/evaluate.py
     deps:
